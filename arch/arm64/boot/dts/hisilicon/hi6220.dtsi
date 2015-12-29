@@ -231,9 +231,12 @@
 			compatible = "arm,pl011", "arm,primecell";
 			reg = <0x0 0xf7111000 0x0 0x1000>;
 			interrupts = <GIC_SPI 37 IRQ_TYPE_LEVEL_HIGH>;
+			clock-freq-high = <1>;
 			clocks = <&sys_ctrl HI6220_UART1_PCLK>,
 				 <&sys_ctrl HI6220_UART1_PCLK>;
 			clock-names = "uartclk", "apb_pclk";
+			clk-enable-flag = <0>;
+			fifo-deep-size = <64>;
 			status = "disabled";
 		};
 

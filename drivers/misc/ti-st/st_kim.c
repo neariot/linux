@@ -477,6 +477,7 @@ long st_kim_start(void *kim_data)
 	}
 
 	do {
+		pr_err("retry=%d\n", retry);
 		/* platform specific enabling code here */
 		if (pdata->chip_enable)
 			pdata->chip_enable(kim_gdata);
